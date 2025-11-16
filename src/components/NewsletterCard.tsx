@@ -12,24 +12,40 @@ interface NewsletterCardProps {
   icon: React.ReactNode;
 }
 
+
 function SingleCard({ title, description, link, icon }: NewsletterCardProps) {
   return (
-    <div className="w-80 h-96">
-      <div className="bg-white p-6 rounded-xl shadow-lg h-full flex flex-col items-center justify-center space-y-4 hover:shadow-xl transition-shadow">
-        <div className="text-secondary w-16 h-16">{icon}</div>
-        <h2 className="text-2xl primary text-black">{title}</h2>
-        <p className="text-black text-center secondary">{description}</p>
-        <Link href={link}>
-        <div className="flex items-center gap-2 bg-[#203A61] text-white font-bold py-2 px-6 rounded-[5px] shadow-lg transition-all duration-300 transform hover:scale-105 secondary">
-         <button>Know More </button>
-         <HiArrowSmallRight />
+    <div className="w-full max-w-xs sm:max-w-sm md:w-80 h-auto md:h-96">
+      <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg h-full flex flex-col items-center justify-center space-y-3 sm:space-y-4 hover:shadow-xl transition-shadow">
+        {/* Icon */}
+        <div className="text-secondary w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center">
+          {icon}
         </div>
-          
+
+        {/* Title */}
+        <h2 className="text-xl sm:text-2xl font-semibold text-black text-center primary">
+          {title}
+        </h2>
+
+        {/* Description */}
+        <p className="text-sm sm:text-base text-black text-center secondary px-1 sm:px-2">
+          {description}
+        </p>
+
+        {/* Button */}
+        <Link href={link} className="w-full flex justify-center mt-2">
+          <button className="flex items-center justify-center gap-2 bg-[#203A61] text-white font-bold py-2 px-4 sm:px-6 rounded-[5px] shadow-lg transition-all duration-300 transform hover:scale-105 secondary w-full sm:w-auto">
+            Know More
+            <HiArrowSmallRight className="text-lg" />
+          </button>
         </Link>
       </div>
     </div>
   );
 }
+
+export default SingleCard;
+
 
 export function NewsletterCards() {
   const newsletters = [
