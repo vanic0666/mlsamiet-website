@@ -142,18 +142,7 @@ email: "asit.upadhyay793@gmail.com",
     },
   },
 
-  {
-   quote:
-     "A storyteller capturing impactful moments, with competitive programming skills with expertise in C, C++, and DSA.",
-    name: "Tushar Tyagi",
-    designation: "Workflow Head",
-    src: "/MLSA_WEBSITE/Domain_Heads_photo/Tushar.jpg",
-    social: {
-commudle: "https://www.commudle.com/users/asitupadhyay",
-linkedin: "https://www.linkedin.com/in/tushar-tyagi-a3781a290/",
-email: "asit.upadhyay793@gmail.com",
-    },
-  },
+  
   {
    quote:
      "A storyteller capturing impactful moments, with competitive programming skills with expertise in C, C++, and DSA.",

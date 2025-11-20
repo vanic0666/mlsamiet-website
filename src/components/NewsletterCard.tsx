@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { Newspaper } from "lucide-react";
-import { TextAnimate } from "./magicui/text-animate";
-import { HiArrowSmallRight } from "react-icons/hi2";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
+
+import { Newspaper } from "lucide-react";
 interface NewsletterCardProps {
   title: string;
   description: string;
@@ -12,44 +12,19 @@ interface NewsletterCardProps {
   icon: React.ReactNode;
 }
 
-
-function SingleCard({ title, description, link, icon }: NewsletterCardProps) {
-  return (
-    <div className="w-full max-w-xs sm:max-w-sm md:w-80 h-auto md:h-96">
-      <div className="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg h-full flex flex-col items-center justify-center space-y-3 sm:space-y-4 hover:shadow-xl transition-shadow">
-        {/* Icon */}
-        <div className="text-secondary w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center">
-          {icon}
-        </div>
-
-        {/* Title */}
-        <h2 className="text-xl sm:text-2xl font-semibold text-black text-center primary">
-          {title}
-        </h2>
-
-        {/* Description */}
-        <p className="text-sm sm:text-base text-black text-center secondary px-1 sm:px-2">
-          {description}
-        </p>
-
-        {/* Button */}
-        <Link href={link} className="w-full flex justify-center mt-2">
-          <button className="flex items-center justify-center gap-2 bg-[#203A61] text-white font-bold py-2 px-4 sm:px-6 rounded-[5px] shadow-lg transition-all duration-300 transform hover:scale-105 secondary w-full sm:w-auto">
-            Know More
-            <HiArrowSmallRight className="text-lg" />
-          </button>
-        </Link>
-      </div>
-    </div>
-  );
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
 
-export default SingleCard;
-
+import {
+  DraggableCardBody,
+  DraggableCardContainer,
+} from "@/components/ui/draggable-card";
 
 export function NewsletterCards() {
-  const newsletters = [
-    {
+  const items = [
+
+        {
       title: "October '25",
       description: "Explore key updates and exciting accomplishments from October 2025.",
       link: "https://www.commudle.com/communities/microsoft-learn-student-ambassadors-meerut-institute-of-engineering-and-technology/newsletters/14th-edition-of-mlsa-miet-chronicles-october-2025-78a5f2cd-c4dc-4d48-acb7-b3c0281537fe",
@@ -123,27 +98,25 @@ export function NewsletterCards() {
     // },
   ];
 
+  
   return (
-    <>
-      <div className="flex flex-col items-center justify-center gap-4 text-primary text-center m-4">
-        <TextAnimate
-          animation="blurInUp"
-          by="character"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl primary"
-        >
-          HIGHLIGHTS
-        </TextAnimate>
-      </div>
+    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
+      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+        If its your first day at Fight Club, you have to fight.
+      </p>
+      {items.map((item) => (
+  <DraggableCardBody key={item.title} className={item.className}>
 
-      <div className="bg-gray-100 py-8 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className=" grid grid-rows-4 grid-cols-3 gap-2 items-center justify-center gap-8">
-            {newsletters.map((newsletter, index) => (
-              <SingleCard key={index} {...newsletter} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
+          <img
+            src={item.image}
+            alt={item.title}
+            className="pointer-events-none relative z-10 h-80 w-80 object-cover"
+          />
+          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+            {item.title}
+          </h3>
+        </DraggableCardBody>
+      ))}
+    </DraggableCardContainer>
   );
 }
