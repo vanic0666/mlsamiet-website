@@ -102,6 +102,20 @@ const avasar2ImagesArray = [
 ];
 
 
+const SalesForceEventArray = [
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040099/IMG_20251103_142406_gsmvcj.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040097/IMG_20251103_141033_ht593i.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040091/IMG_1852_y5vhdg.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040094/Copy_of_IMG_1836_efwels.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040099/IMG_20251103_131658_ffkpp1.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040472/IMG_1903_roo277.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040086/IMG_1837_rnknrj.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040086/Copy_of_IMG_1899_ndimgr.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040092/Copy_of_IMG_1826_lu1jgz.jpg",
+  "https://res.cloudinary.com/davfze0e8/image/upload/v1770040773/IMG_20251103_140758_1_rjkltd.jpg",
+
+
+];
 // Combine all images into one array
 
 const Gallery = () => {
@@ -133,7 +147,7 @@ const Gallery = () => {
       </section>
 
 
-      
+
       <section id="devgathering">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold my-8 text-center text-[#203A61] secondary">
           <TextAnimate>
@@ -261,15 +275,15 @@ const Gallery = () => {
 
 
 
-      <section id="prayas">
+      <section id="SalesForceEventArray">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold my-8 text-center  text-[#203A61]">
           <TextAnimate>
-            PRAYAS
+            SalesForceEvent
 
           </TextAnimate>
         </h1>
         <div className="columns-2 sm:columns-3 lg:columns-4 gap-3 sm:gap-4 [&>div:not(:first-child)]:mt-3 sm:[&>div:not(:first-child)]:mt-4">
-          {prayasArray.map((image, index) => (
+          {SalesForceEventArray.map((image, index) => (
             <div key={index} className="break-inside-avoid">
               <img
                 className="w-full h-auto rounded-[10px] hover:opacity-90 transition-opacity duration-300 shadow-sm hover:shadow-md"
