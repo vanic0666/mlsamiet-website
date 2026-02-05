@@ -12,10 +12,20 @@ const technicalTeam = [
       "/MLSA_WEBSITE/Domain_Heads_photo/aayushi.jpg",
   },
   {
-    name: "Mohd Faishal",
-    imageUrl: "/MLSA_WEBSITE/volunteer_photo/technical team/Mo Faisal_Technical.jpg",
+    name: "Azan ali",
+    imageUrl:
+      "/MLSA_WEBSITE/volunteer_photo/technical team/Azanalimlsa.webp",
   },
   
+   
+  {
+    name: "Mohd Faishal",
+    imageUrl: "/MLSA_WEBSITE/volunteer_photo/technical team/Mo Faisal_Technical.jpg",
+  },{
+    name: "Manu chauhan",
+    imageUrl: "/MLSA_WEBSITE/volunteer_photo/technical team/manu_technical.webp",
+  },
+   
   {
     name: "Rakshit Shekhawat",
     imageUrl: "/MLSA_WEBSITE/volunteer_photo/technical team/Rakshit_shekhawat _Technical.jpg",
@@ -76,10 +86,7 @@ const graphicsTeam = [
     imageUrl: "/MLSA_WEBSITE/volunteer_photo/Graphic team/Radhika Upadhyay.jpg",
 
   },
-  {
-    name: "Satyam Sharma",
-    imageUrl: "/MLSA_WEBSITE/volunteer_photo/Graphic team/Satyam Sharma_Graphics.webp",
-  },
+  
   {
     name: "Tanu Chauhan",
     imageUrl: "/MLSA_WEBSITE/volunteer_photo/Graphic team/Tanu Chauhan_Graphics .jpg",
@@ -161,23 +168,13 @@ const eventTeam = [
     imagePosition: "top" as const,
 
   },
-  {
-    name: "Shivam Sharma",
-    imageUrl:
-      "/MLSA_WEBSITE/volunteer_photo/event team/ShivamSharma_Eventmanagement.png",
-  },
+  
   {
     name: "Saptak Gupta",
     imageUrl:
       "/MLSA_WEBSITE/volunteer_photo/event team/Saptak gupta_Event.jpg",
   },
-    {
-    name: "Vaibhavi Chaudhary",
-    imageUrl:
-      "/MLSA_WEBSITE/volunteer_photo/event team/Vaibhavi Event.jpg",
-    imagePosition: "top" as const,
-
-  },
+   
  
 ];
 
@@ -199,13 +196,7 @@ const prTeam = [
     imagePosition: "top" as const,
 
   },
-{
-  name: "Deepika Panwar",
-    imageUrl:
-  "/MLSA_WEBSITE/volunteer_photo/PR team/DeepikaPanwar_PublicRelationsAndOutreach.JPG",
-    imagePosition: "top" as const,
 
-  },
     {
   name: "Divyanshi",
     imageUrl:
@@ -216,12 +207,7 @@ const prTeam = [
     imageUrl:
   "/MLSA_WEBSITE/volunteer_photo/PR team/Gaurika Dogra _PR&Outreach .jpg",
   },
-  {
-  name: "Mahak Rana",
-    imageUrl:
-  "/MLSA_WEBSITE/volunteer_photo/PR team/IMG-20251107-WA0021.jpg",
-
-  },
+  
   {
   name: "Priyanshi Jindal",
     imageUrl:
@@ -249,15 +235,21 @@ const socialTeam = [
     imageUrl:
       "/MLSA_WEBSITE/volunteer_photo/social team/Akshara Gupta_Socials.png",
   },
-   {
-    name: "Hitanshi Goswami",
-    imageUrl:
-      "/MLSA_WEBSITE/volunteer_photo/social team/Hitanshi_socials.jpg",
-  },
+   
   {
     name: "Prashant",
     imageUrl:
       "/MLSA_WEBSITE/volunteer_photo/social team/Prashant_Social.jpg",
+  },
+   {
+    name: "Samiya shariq",
+    imageUrl:
+      "/MLSA_WEBSITE/volunteer_photo/social team/SamiyaShariq_Socials.jpg",
+  },
+   {
+    name: "Vansh pal",
+    imageUrl:
+      "/MLSA_WEBSITE/volunteer_photo/social team/Vanshpalsocialmlsa.jpg",
   },
  
 ];
@@ -274,9 +266,19 @@ const visualTeam = [
       "/MLSA_WEBSITE/volunteer_photo/visual team/AryanVisuals.webp"
   },
   {
+    name: "Aryan dhiman",
+    imageUrl:
+      "/MLSA_WEBSITE/volunteer_photo/visual team/AryanDhiman_visuals.jpg"
+  },
+  {
     name: "Vartika Chauhan",
     imageUrl:
       "/MLSA_WEBSITE/volunteer_photo/visual team/IMG_20251110_192208.jpg",
+  },
+  {
+    name: "Vansh yadav",
+    imageUrl:
+      "/MLSA_WEBSITE/volunteer_photo/visual team/Vansh Yadav _Visuals.jpg",
   },
   
 ];
@@ -335,7 +337,7 @@ export function Teams() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-xl sm:text-4xl font-bold mb-8 text-[#203A61] secondary">Graphics</h2>
+        <h2 className="text-xl sm:text-4xl font-bold mb-8 text-[#203A61] secondary">Creative Design</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {graphicsTeam.map((member, index) => (
             <TeamMember key={member.name} {...member} isFirst={index === 0} />
@@ -344,7 +346,7 @@ export function Teams() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-xl sm:text-4xl font-bold mb-8 text-[#203A61] secondary">Socials</h2>
+        <h2 className="text-xl sm:text-4xl font-bold mb-8 text-[#203A61] secondary">Digital Marketing</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {socialTeam.map((member, index) => (
             <TeamMember key={member.name} {...member} isFirst={index === 0} />
